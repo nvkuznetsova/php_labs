@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node --experimental-modules index.mjs"
+    "start": "node --experimental-modules s.mjs"
   },
   "name": "heroku-starter",
   "version": "1.0.2",
