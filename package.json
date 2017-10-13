@@ -7,7 +7,7 @@
   "engines": {
     "node": ">=8.5.0"
   },
-  "main": "index.mjs",
+  "main": "s.mjs",
   "repository": "https://github.com/GossJS/heroku.git",
   "author": "GossJS",
   "license": "MIT",
