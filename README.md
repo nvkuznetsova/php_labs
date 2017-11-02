@@ -6,3 +6,9 @@
 ИНСТРУКЦИИ:
 
 https://kodaktor.ru/g/heroku
+
+UPD
+
+Альтернативный вариант в докер-контейнере
+
+https://kodaktor.ru/g/dockerportfolio
