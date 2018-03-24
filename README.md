@@ -5,19 +5,15 @@
 
 ```
 
-mkdir $(date +%Y%m%d_%H%M%S) && cd $_ && git clone -b php https://github.com/GossJS/heroku.git . && rm -rf .git
+mkdir $(date +%Y%m%d_%H%M%S) && cd $_ && git clone -b php https://github.com/GossJS/heroku.git .  
 
-composer update
-git init
 heroku create
-git add .
-git commit -m 'first'
-git push heroku master
+git push heroku php
 heroku open
 
 ```
 
-или можно забрать просто содержимое этой папки вместо первого шага
+или можно забрать просто содержимое этой папки вместо первого шага, тогда надо ещё инициировать локальный репозиторий 
 
 ```
 mkdir $(date +%Y%m%d_%H%M%S) && cd $_ && svn checkout https://github.com/GossJS/heroku/branches/php .
