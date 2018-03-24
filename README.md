@@ -8,12 +8,16 @@
 mkdir $(date +%Y%m%d_%H%M%S) && cd $_ && git clone -b php https://github.com/GossJS/heroku.git .  
 
 heroku create
-git push heroku php
+composer update
+git add composer.lock && git commit -m 'lock' (или просто git add .)
+git push heroku php:master
 heroku open
 
 ```
 
-или можно забрать просто содержимое этой папки вместо первого шага, тогда надо ещё инициировать локальный репозиторий 
+Обратите внимание: мы склонировали ветку php, а heroku поддерживает билд приложения из ветки master, поэтому мы пушим из локальной ветки php в удалённую ветку master. Если исходный репозиторий ваш, то к этому ещё нужно добавать пуш в нужную ветку вашего удалённого репозитория!
+
+Можно забрать просто содержимое этой папки вместо первого шага, тогда надо ещё инициировать локальный репозиторий и ветка после этой процедуры будет master
 
 ```
 mkdir $(date +%Y%m%d_%H%M%S) && cd $_ && svn checkout https://github.com/GossJS/heroku/branches/php .
