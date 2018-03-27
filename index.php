@@ -20,12 +20,9 @@
   }
 
   $date = new class {
-    function __construct($today = date('d/m/Y H:i')) {
-      $this->today = $today;
-    }
-      function getDate() {return '<h1>'.$this->today.'</h1>';}
+      function getDate() {return date('d/m/Y H:i');}
   };
 
   if (isset($_GET)) {
-    echo($date->getDate());
+    echo('<h1>'.$date->getDate().'</h1>');
   }
