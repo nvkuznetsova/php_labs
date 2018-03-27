@@ -7,7 +7,7 @@
 
   if (isset($_GET['author'])) {
     header('Content-type: text/html; charset=utf-8');
-    echo '<h4>Ilya Goss</h4>';
+    echo '<h4>Кузнецова Наталья</h4>';
   }
   if (isset($_GET['info'])) {
     phpinfo();
