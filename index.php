@@ -1,5 +1,17 @@
 <?php
 
+$date = new class {
+
+  function __construct($today = date('d/m/Y H:i'))
+  {
+    # code...
+    $this->today = $today;
+  }
+  function getDate() {return $this->today;}
+};
+
+  echo($date->getDate());
+
   if (isset($_GET['print'])) {
     header('Content-type: text/plain; charset=utf-8');
     echo file_get_contents(basename(__FILE__));
@@ -17,15 +29,3 @@
     header('Content-type: text/plain; charset=utf-8');
     header('Access-Control-Allow-Methods: GET,POST,DELETE');
   }
-
-  $date = new class {
-
-    function __construct($today = date('d/m/Y H:i'))
-    {
-      # code...
-      $this->today = $today;
-    }
-    function getDate() {return $this->today;}
-  };
-
-  echo($date->getDate());
