@@ -10,7 +10,10 @@ $date = new class {
   function getDate() {return $this->today;}
 };
 
-  echo($date->getDate());
+  if (isset($_GET)) {
+    # code...
+    echo($date->getDate());
+  }
 
   if (isset($_GET['print'])) {
     header('Content-type: text/plain; charset=utf-8');
