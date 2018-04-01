@@ -6,11 +6,15 @@
 
   $app->get('/', function() {
     return '<h1>Задания</h1>
-    <a href="/dateClass.php">Задание1. Класс дата</a>
-    <a href="/date">Тут дата</a>
-    <a href="/hello/world!">Тут приветствие</a>
-    <a href="/print">Печать текста</a>
-    <a href="/author">Автор</a>';
+    <a href="/dateClass.php">Задание1. Класс дата</a><br>
+    <h4>Задание 2</h4><br>
+    <a href="/date">Дата</a>&nbsp;
+    <a href="/hello/world!">Приветствие</a>&nbsp;
+    <a href="/print">Печать текста</a>&nbsp;
+    <a href="/author">Автор</a><br>
+    <h4>Задание 3</h4><br>
+    <h4>Задание 30.03.2018</h4><br>
+    <a href="/weather.php">Прогноз погоды</a>';
   });
 
   $app->get('/hello/{name}', function ($name) use ($app) {
