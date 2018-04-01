@@ -6,5 +6,6 @@
   $response = $client->get($URL);
   echo '<h1>Promises</h1>';
   $result = json_decode($response->getBody());
-  echo '<p>Самая низкая температура 31.03.2018: '.$result->query->results->channel->item->forecast[1]->low.'</p>';
+  //var_dump($result);
+  echo '<p>Самая низкая температура завтра: '.$result->query->results->channel->item->forecast[1]->low.'</p>';
  ?>
