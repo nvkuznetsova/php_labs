@@ -1,4 +1,4 @@
-< ?php
+<?php
 
   require 'vendor/autoload.php';
 
@@ -11,5 +11,5 @@
   $app->get('/date', function(){
       return date('r');
   });
-  
+
 	$app->run();
