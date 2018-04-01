@@ -5,7 +5,8 @@
   $app = new Silex\Application();
 
   $app->get('/', function() {
-    return '<h1>Hello</h1>';
+    return '<h1>Задания</h1><a href="/date">Тут дата</a>
+    <a href="/hello/world!">Тут приветствие</a>';
   });
 
   $app->get('/hello/{name}', function ($name) use ($app) {
