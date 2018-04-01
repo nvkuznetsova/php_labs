@@ -1,29 +1,15 @@
 <?php
+  require 'vendor/autoload.php';
 
-  if (isset($_GET['print'])) {
-    header('Content-type: text/plain; charset=utf-8');
-    echo file_get_contents(basename(__FILE__));
-  }
+  $app = new Silex\Application();
+  $app->get('/hello/{name}', function ($name) use ($app) {
+    return 'Hello '.$app->escape($name);
+  });
 
-  if (isset($_GET['author'])) {
-    header('Content-type: text/html; charset=utf-8');
-    echo '<h4 id="author" title="GossJS">Кузнецова Наталья</h4>';
-  }
-  if (isset($_GET['info'])) {
-    phpinfo();
-  }
+  $app->get('/date', function(){
+    date_default_timezone_set('Europe/Kiev');
+    return date('d/m/Y H:i');
+  });
 
-  if (isset($_GET['public'])) {
-    header('Access-Constrol-Allow-Origin: *');
-    header('Content-type: text/plain; charset=utf-8');
-    header('Access-Control-Allow-Methods: GET,POST,DELETE');
-  }
-
-  date_default_timezone_set('Europe/Kiev');
-  $date = new class {
-      function getDate() {return date('d/m/Y H:i');}
-  };
-
-  if (isset($_GET)) {
-    echo('<h1>'.$date->getDate().'</h1>');
-  }
+  $app->run();
+ ?>
