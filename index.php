@@ -19,6 +19,7 @@
     header('Access-Control-Allow-Methods: GET,POST,DELETE');
   }
 
+  date_default_timezone_set('Europe/Kiev');
   $date = new class {
       function getDate() {return date('d/m/Y H:i');}
   };
