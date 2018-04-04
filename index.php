@@ -6,7 +6,7 @@
 
   $app->get('/', function() {
     return '<h1>Задания</h1>
-    <a href="/class">Задание1. Класс дата</a><br>
+    <a href="/dateClass.php">Задание1. Класс дата</a><br>
     <h4>Задание 2</h4><br>
     <a href="/date">Дата</a>&nbsp;
     <a href="/hello/world!">Приветствие</a>&nbsp;
@@ -40,10 +40,6 @@
 
   $app->get('/info', function() {
     return phpinfo();
-  });
-
-  $app->get('/class', function() {
-    require_once('dateClass.php');
   });
 
 	$app->run();
