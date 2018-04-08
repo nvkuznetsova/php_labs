@@ -12,8 +12,6 @@
     <a href="/hello/world!">Приветствие</a>&nbsp;
     <a href="/print">Печать текста</a>&nbsp;
     <a href="/author">Автор</a><br>
-    <h4>Задание 3</h4><br>
-    <a href="/invert.php">Test</a><br>
     <h4>Задание 4</h4><br>
     <a href="/diagrams.php">Диаграмма</a>
     <h4>Задание 30.03.2018</h4><br>
@@ -41,6 +39,13 @@
 
   $app->get('/info', function() {
     return phpinfo();
+  });
+
+  $app->get('/haha', function() {
+    if(getenv('REQUEST_METHOD') == 'POST') {
+    	$client_data = file_get_contents("php://input");
+    	echo ~$client_data;
+    	exit();
   });
 
 	$app->run();
