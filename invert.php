@@ -31,7 +31,7 @@ function sendAndLoad(sURL, sXML) {
 <button onclick="
 	alert(sendAndLoad(
 			location.href,
-			'<xml><sample>data</sample></xml>'
+      'I am data!'
 	))">
 Test
 </button>
