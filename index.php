@@ -15,7 +15,8 @@
     <h4>Задание 4</h4><br>
     <a href="/diagrams.php">Диаграмма</a>
     <h4>Задание 30.03.2018</h4><br>
-    <a href="/weather.php">Прогноз погоды</a>';
+    <a href="/weather.php">Прогноз погоды</a>&nbsp;
+    <a href="/add/100/50">Сумма</a>';
   });
 
   $app->get('/hello/{name}', function ($name) use ($app) {
@@ -47,6 +48,11 @@
     	echo ~$client_data;
     	exit();
     }
+  });
+
+  $app->get('/add/{first}/{second}', function ($first, $second) use ($app) {
+      $sum = $first+$second;
+      return '<h1>Сумма:</h1><h3>'.$sum.'</h3>';
   });
 
 	$app->run();
