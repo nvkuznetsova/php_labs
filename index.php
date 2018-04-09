@@ -70,7 +70,7 @@
   });
 
   $app->get('/div/{first}/{second}', function ($first, $second) use ($app) {
-      $div = $first+$second;
+      $div = $first/$second;
       return '<h1>Деление:</h1><h3>'.$div.'</h3>';
   });
 
