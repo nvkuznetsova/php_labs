@@ -16,7 +16,11 @@
     <a href="/diagrams.php">Диаграмма</a>
     <h4>Задание 30.03.2018</h4><br>
     <a href="/weather.php">Прогноз погоды</a>&nbsp;
-    <a href="/add/100/50">Сумма</a>';
+    <a href="/add/100/50">Сумма</a>&nbsp;
+    <a href="/sub/100/50">Разность</a>&nbsp;
+    <a href="/mpy/100/50">Умножение</a>&nbsp;
+    <a href="/div/100/50">Деление</a>&nbsp;
+    <a href="/pow/100/2">Степерь</a>&nbsp;';
   });
 
   $app->get('/hello/{name}', function ($name) use ($app) {
@@ -53,6 +57,26 @@
   $app->get('/add/{first}/{second}', function ($first, $second) use ($app) {
       $sum = $first+$second;
       return '<h1>Сумма:</h1><h3>'.$sum.'</h3>';
+  });
+
+  $app->get('/sub/{first}/{second}', function ($first, $second) use ($app) {
+      $sub = $first-$second;
+      return '<h1>Разность:</h1><h3>'.$sub.'</h3>';
+  });
+
+  $app->get('/mpy/{first}/{second}', function ($first, $second) use ($app) {
+      $m = $first*$second;
+      return '<h1>Умножение:</h1><h3>'.$m.'</h3>';
+  });
+
+  $app->get('/div/{first}/{second}', function ($first, $second) use ($app) {
+      $div = $first+$second;
+      return '<h1>Деление:</h1><h3>'.$div.'</h3>';
+  });
+
+  $app->get('/pow/{first}/{second}', function ($first, $second) use ($app) {
+      $pow = pow($first, $second);
+      return '<h1>Степень:</h1><h3>'.$pow.'</h3>';
   });
 
 	$app->run();
