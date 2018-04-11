@@ -20,7 +20,7 @@
     <a href="/sub/100/50">Разность</a>&nbsp;
     <a href="/mpy/100/50">Умножение</a>&nbsp;
     <a href="/div/100/50">Деление</a>&nbsp;
-    <a href="/pow/100/2">Степерь</a>&nbsp;';
+    <a href="/pow/100/2">Степень</a>&nbsp;';
   });
 
   $app->get('/hello/{name}', function ($name) use ($app) {

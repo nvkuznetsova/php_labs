@@ -8,7 +8,7 @@ $h = 300;
 $pad = 5;
 $i=0;
 
-$wRect = $w / count($names) ;
+$wRect = $w / count($names);
 $ctx = imagecreate($w, $h);
 $red = imagecolorallocate ($ctx,255,0,0);
 $white = imagecolorallocate ($ctx,255,255,255);

@@ -43,15 +43,10 @@ for($i=0;$i<$columns;$i++)$maxv = max($values[$i],$maxv);
         $y2 = $height;
 
         imagefilledrectangle($im,$x1,$y1,$x2,$y2,$gray);
-
-        // Для 3D эффекта
-        imageline($im,$x1,$y1,$x1,$y2,$gray_lite);
-        imageline($im,$x1,$y2,$x2,$y2,$gray_lite);
-        imageline($im,$x2,$y1,$x2,$y2,$gray_dark);
     }
 
 // Отправляем PNG заголовок.
 // При необходимости можно заменить на JPEG или GIF и т.д.
 header ("Content-type: image/png");
-imagepng($im);
+imagegd($im);
 ?>
