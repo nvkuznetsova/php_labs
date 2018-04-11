@@ -23,10 +23,10 @@ $y1 = $h-$hRect;
 $x2 = (($i+1)*$wRect)-$pad;
 $y2 = $h;
 
-$textcolor = imagecolorallocate($ctx, 0, 0, 0);
+//$textcolor = imagecolorallocate($ctx, 0, 0, 0);
 
 imagefilledrectangle($ctx,$x1,$y1,$x2,$y2,$red);
-imagestring($ctx, 2, $x1+5, 280, $names[$i], $textcolor);
+//imagestring($ctx, 2, $x1+5, 280, $names[$i], $textcolor);
 $i++;
 });
 
