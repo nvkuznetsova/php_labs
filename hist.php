@@ -1,0 +1,36 @@
+<?php
+
+$rates = json_decode(file_get_contents('https://kodaktor.ru/j/rates'));
+
+$names = array_map(function($x){return $x -> name;}, $rates);
+
+$w = 400;
+$h = 300;
+$pad = 5;
+$i=0;
+
+$wRect = $w / count($names) ;
+$ctx = imagecreate($w, $h);
+$red = imagecolorallocate ($ctx,255,0,0);
+$white = imagecolorallocate ($ctx,255,255,255);
+imagefilledrectangle($ctx,0,0,$w,$h,$white);
+
+array_walk($rates, function($x, $i) use ($wRect, $ctx, $h, $red, $pad, $names) {
+$sell = $x -> sell;
+$hRect = $sell*3;
+
+$x1 = $i*$wRect;
+$y1 = $h-$hRect;
+$x2 = (($i+1)*$wRect)-$pad;
+$y2 = $h;
+
+$textcolor = imagecolorallocate($ctx, 0, 0, 0);
+
+imagefilledrectangle($ctx,$x1,$y1,$x2,$y2,$red);
+imagestring($ctx, 2, $x1+5, 280, $names[$i], $textcolor);
+$i ++;
+});
+
+header ("Content-type: image/png");
+imagepng($ctx);
+?>

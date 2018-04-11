@@ -13,7 +13,7 @@
     <a href="/print">Печать текста</a>&nbsp;
     <a href="/author">Автор</a><br>
     <h4>Задание 4</h4><br>
-    <a href="/diagrams.php">Диаграмма</a>
+    <a href="/hist">Диаграмма</a>
     <h4>Задание 30.03.2018</h4><br>
     <a href="/weather.php">Прогноз погоды</a>&nbsp;
     <a href="/add/100/50">Сумма</a>&nbsp;
@@ -33,7 +33,7 @@
   });
 
   $app->get('/print', function() {
-    header('Content-type: text/plain; charset=utf-8');
+    //header('Content-type: text/plain; charset=utf-8');
     return file_get_contents(basename(__FILE__));
   });
 
@@ -52,6 +52,12 @@
     	echo ~$client_data;
     	exit();
     }
+  });
+
+  $app->get('/hist', function() {
+    header('Content-type: text/html; charset=utf-8');
+    return '<h4 id="author" title="GossJS">Кузнецова Наталья</h4>
+    <br><img src="./hist.php">';
   });
 
   $app->get('/add/{first}/{second}', function ($first, $second) use ($app) {
