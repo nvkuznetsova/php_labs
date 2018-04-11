@@ -56,7 +56,7 @@
 
   $app->get('/hist', function() {
     return '<h4 id="author" title="GossJS">Кузнецова Наталья</h4>
-    <br><img src="./hist.php">';
+    <br><img src="./test.php">';
   });
 
   $app->get('/add/{first}/{second}', function ($first, $second) use ($app) {
