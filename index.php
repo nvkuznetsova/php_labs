@@ -55,7 +55,6 @@
   });
 
   $app->get('/hist', function() {
-    header('Content-type: text/html; charset=utf-8');
     return '<h4 id="author" title="GossJS">Кузнецова Наталья</h4>
     <br><img src="./hist.php">';
   });
