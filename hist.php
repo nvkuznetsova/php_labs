@@ -22,12 +22,12 @@ $x1 = $i*$wRect;
 $y1 = $h-$hRect;
 $x2 = (($i+1)*$wRect)-$pad;
 $y2 = $h;
-$x3 = $x1+10;
+$x3 = $x1+7;
 
 $textcolor = imagecolorallocate($ctx, 0, 0, 0);
 
 imagefilledrectangle($ctx,$x1,$y1,$x2,$y2,$red);
-imagettftext($ctx, 10, 0, $x3, 285, $textcolor, "DejaVuSans.ttf", $names[$i]);
+imagettftext($ctx, 10, 0, $x3, 385, $textcolor, "DejaVuSans.ttf", $names[$i]);
 $i++;
 });
 
