@@ -22,7 +22,7 @@ $x1 = $i*$wRect;
 $y1 = $h-$hRect;
 $x2 = (($i+1)*$wRect)-$pad;
 $y2 = $h;
-$x3 = ($x2-$x1)/2;
+$x3 = ($x1-$x2)/2;
 
 $textcolor = imagecolorallocate($ctx, 0, 0, 0);
 
