@@ -20,7 +20,7 @@
     <a href="/sub/100/50">Разность</a>&nbsp;
     <a href="/mpy/100/50">Умножение</a>&nbsp;
     <a href="/div/100/50">Деление</a>&nbsp;
-    <a href="/pow/100/2">Степень</a>&nbsp;';
+    <a href="/pow/10/2">Степень</a>&nbsp;';
   });
 
   $app->get('/hello/{name}', function ($name) use ($app) {
@@ -56,7 +56,7 @@
 
   $app->get('/hist', function() {
     return '<h4 id="author" title="GossJS">Кузнецова Наталья</h4>
-    <br><img src="./test.php">';
+    <br><img src="./hist.php">';
   });
 
   $app->get('/add/{first}/{second}', function ($first, $second) use ($app) {
