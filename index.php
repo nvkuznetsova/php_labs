@@ -46,7 +46,7 @@
     return phpinfo();
   });
 
-  $app->get('/haha', function() {
+  $app->get('/haha', function($$client_data) {
     	$client_data = file_get_contents("php://input");
     	echo ~$client_data;
     	exit();
