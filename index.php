@@ -47,11 +47,9 @@
   });
 
   $app->get('/haha', function() {
-    if(getenv('REQUEST_METHOD') == 'POST') {
     	$client_data = file_get_contents("php://input");
     	echo ~$client_data;
     	exit();
-    }
   });
 
   $app->get('/hist', function() {
