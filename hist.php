@@ -27,7 +27,7 @@ $textcolor = imagecolorallocate($ctx, 0, 0, 0);
 
 imagefilledrectangle($ctx,$x1,$y1,$x2,$y2,$red);
 //imagestring($ctx, 2, $x1+5, 280, $names[$i], $textcolor);
-imagettftext($ctx, 10, 0, $x1+$pad, 280, $textcolor, "DejaVuSans.ttf", $names[$i]); 
+imagettftext($ctx, 10, 0, $x2-$x1, 285, $textcolor, "DejaVuSans.ttf", $names[$i]); 
 $i++;
 });
 
