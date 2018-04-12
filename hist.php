@@ -3,9 +3,9 @@ $rates = json_decode(file_get_contents('https://kodaktor.ru/j/rates'));
 
 $names = array_map(function($x){return $x -> name;}, $rates);
 
-$w = 400;
-$h = 300;
-$pad = 5;
+$w = 600;
+$h = 400;
+$pad = 10;
 $i=0;
 
 $wRect = $w / count($names);
@@ -16,13 +16,13 @@ imagefilledrectangle($ctx,0,0,$w,$h,$white);
 
 array_walk($rates, function($x, $i) use ($wRect, $ctx, $h, $red, $pad, $names) {
 $sell = $x -> sell;
-$hRect = $sell*3;
+$hRect = $sell*4;
 
 $x1 = $i*$wRect;
 $y1 = $h-$hRect;
 $x2 = (($i+1)*$wRect)-$pad;
 $y2 = $h;
-$x3 = $x1+3;
+$x3 = $x1+10;
 
 $textcolor = imagecolorallocate($ctx, 0, 0, 0);
 
