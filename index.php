@@ -46,10 +46,10 @@
     return phpinfo();
   });
 
-  $app->get('/haha', function($client_data) {
-    	$client_data = file_get_contents("php://input");
-    	echo ~$client_data;
-    	exit();
+  $app->get('/haha', function() {
+    	$get = file_get_contents("php://input");
+      $data = json_decode($get, true);
+    	print_r(~$data);
   });
 
   $app->get('/hist', function() {
