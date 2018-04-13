@@ -47,9 +47,8 @@
   });
 
   $app->get('/haha', function() {
-    	$get = file_get_contents("php://input");
-      $data = json_decode($get, true);
-    	print_r(~$data);
+    	$data = file_get_contents("php://input");
+      var_dump($data);
   });
 
   $app->get('/hist', function() {
