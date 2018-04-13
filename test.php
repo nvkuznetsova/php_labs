@@ -1,4 +1,5 @@
 <?php
 $data = file_get_contents('php://input');
-$json = json_decode($data);
-var_dump(~$json);
+$inv = ~$data;
+$json = json_decode($inv, true);
+var_dump($json);
