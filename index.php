@@ -46,11 +46,6 @@
     return phpinfo();
   });
 
-  $app->get('/haha', function() {
-    	$data = file_get_contents("php://input");
-      var_dump($data);
-  });
-
   $app->get('/hist', function() {
     return '<h4 id="author" title="GossJS">Кузнецова Наталья</h4>
     <br><img src="./hist.php">';
