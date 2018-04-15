@@ -1,5 +1,4 @@
 <?php
-//$data = file_get_contents('php://input');
-$data = '\xa7';
+$data = file_get_contents('php://input');
 $inv = ~$data;
-var_dump(hex2bin($inv));
+var_dump($inv);
