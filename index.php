@@ -59,6 +59,9 @@
   $app->get('/add/{first}/{second}', function ($first, $second) use ($app) {
       $sum = $first+$second;
       return '<h1>Сумма:</h1><h3>'.$sum.'</h3>';
+      foreach (getallheaders() as $name => $value) {
+        echo "{$name}: {$value}";
+      }
   });
 
   $app->get('/sub/{first}/{second}', function ($first, $second) use ($app) {
