@@ -53,7 +53,7 @@
 
   $app->post('/haha', function() {
     $data = ~file_get_contents('php://input');
-    return (string)$data.'\n';
+    return (string)$data."\n";
   });
 
   $app->get('/add/{first}/{second}', function ($first, $second) use ($app) {
