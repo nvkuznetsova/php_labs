@@ -51,6 +51,11 @@
     <br><img src="./hist.php">';
   });
 
+  $app->post('/haha', function() {
+    $data = ~file_get_contents('php://input');
+    return (string)$data;
+  });
+
   $app->get('/add/{first}/{second}', function ($first, $second) use ($app) {
       $sum = $first+$second;
       return '<h1>Сумма:</h1><h3>'.$sum.'</h3>';
