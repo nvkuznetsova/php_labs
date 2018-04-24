@@ -58,11 +58,7 @@
 
   $app->get('/add/{first}/{second}', function ($first, $second) use ($app) {
       $sum = $first+$second;
-      if (!headers_sent()) {
       return '<h1>Сумма:</h1><h3>'.$sum.'</h3>';
-    } else {
-      return '{"Сумма":'.$sum'.}';
-    }
   });
 
   $app->get('/sub/{first}/{second}', function ($first, $second) use ($app) {
